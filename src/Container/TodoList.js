@@ -1,18 +1,20 @@
 import React from "react";
-import Todo from "../Components/TodoListApp";
+import Todo from "../Components/Todo";
 import { connect } from "react-redux";
 import { toggleTodo } from "../Actions/TodoList";
 
 const TodoList = ({ todos, toggleTodo }) => {
-
-  return (
-    <ul>
-      {todos != null &&
-        todos.map(todo => (
-          <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
-        ))}
-    </ul>
-  );
+    return (
+        <ul>
+        {todos != null &&
+            todos.map(todo => (
+                <Todo key={todo.id} {...todo} onClick={(e) => {
+                    toggleTodo(todo.id);
+                }}/>
+            ))
+        }
+        </ul>
+    );
 };
 
 const filterTodos = (todos, filter) => {

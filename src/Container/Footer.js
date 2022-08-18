@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "../Components/TodoListApp/Link";
+import Link from "../Components/Todo/Link";
 
 const Footer = () => {
   return (

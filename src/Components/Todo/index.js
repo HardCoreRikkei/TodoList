@@ -1,20 +1,18 @@
 import React from "react";
+import './styles.css';
 
 const Todo = ({ text, complete, onClick }) => {
   return (
-    <div style={{display:"flex", margin: "15px"}}>
-      <button style={{marginRight: "20px"}}>Edit</button>
       <li
-        onClick={onClick}
-        style={{ 
-            textDecoration: complete ? "line-through" : "none" , 
+        onClick = {onClick}
+        style = {{ 
             listStyleType: 'none', 
             cursor: "pointer"
         }}
+        className={complete ? "checked" : ""}
       > 
         {text}
       </li>
-    </div>
   );
 };
 
