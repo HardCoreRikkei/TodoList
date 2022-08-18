@@ -31,4 +31,8 @@ input {
     padding: 10px;
     font-size: 16px;
     border-radius: 2px;
+    outline: none;
+}
+input:focus {
+    border: 1px rgb(189, 189, 189) solid;
 }

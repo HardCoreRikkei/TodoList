@@ -1,9 +1,10 @@
 import React from "react";
-import Link from "../Components/Todo/Link";
+import Link from "../../Components/Link";
+import './styles.css';
 
 const Footer = () => {
   return (
-    <div>
+    <div className="groupbtn">
       <Link filter={"SHOW_ALL"}>All</Link>
       <Link filter={"SHOW_ACTIVE"}>Active</Link>
       <Link filter={"SHOW_COMPLETE"}>Complete</Link>

@@ -1,0 +1,16 @@
+button {
+    padding: 10px;
+    width: 20%;
+    background: #555;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+.groupbtn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { filter } from "../../Actions/TodoList";
+import { filter } from "../Actions/TodoList";
 
 const Link = ({ active, children, onClick }) => {
   return (
