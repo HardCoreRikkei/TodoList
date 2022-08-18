@@ -2,6 +2,12 @@ ul {
     margin: 0;
     padding: 0;
 }
+li {
+    list-style-type: 'none';
+    cursor: "pointer";
+    display:flex;
+    justify-content: space-between;
+}
 ul li {
     cursor: pointer;
     position: relative;
@@ -10,6 +16,7 @@ ul li {
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
+    align-items: center;
 }
 ul li:nth-child(odd) {
     background: #f9f9f9;
@@ -20,6 +27,8 @@ ul li:hover {
 ul li.checked {
     background: #888;
     color: #fff;
+}
+ul li div.checked {
     text-decoration: line-through;
 }
 ul li.checked::before {
@@ -28,7 +37,7 @@ ul li.checked::before {
     border-color: #fff;
     border-style: solid;
     border-width: 0 2px 2px 0;
-    top: 10px;
+    top: 35%;
     left: 16px;
     transform: rotate(45deg);
     height: 15px;
@@ -45,4 +54,26 @@ ul li.checked::before {
 .close:hover {
     background-color: #f44336;
     color: white;
+}
+/*  Style the group button function */
+
+.groupBtn {
+    width: 5%;
+    min-width: 80px;
+    color: #ddd;
+    text-align: center;
+    font-weight: 600;
+}
+
+.editBtn {
+    border: 1px white solid;
+    padding: 2px;
+    background-color: #282c34;
+    margin-bottom: 2px;
+}
+.remoteBtn {
+    border: 1px white solid;
+    padding: 2px;
+    background-color: red;
+    margin-top: 2px;
 }

@@ -20,9 +20,9 @@ const TodoList = ({ todos, toggleTodo }) => {
 const filterTodos = (todos, filter) => {
   switch (filter) {
     case "SHOW_COMPLETE":
-      return todos.filter(todo => todo.complete === true);
+      return todos.filter(todo => todo.complete);
     case "SHOW_ACTIVE":
-      return todos.filter(todo => todo.complete === false);
+      return todos.filter(todo => !todo.complete);
     default:
       return todos;
   }
