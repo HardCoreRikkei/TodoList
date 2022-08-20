@@ -17,7 +17,7 @@ const Todo = ({ text, complete, id, onClick, deleteTodo, editTodo}) => {
             setEditMode(!editMode);
         }
         setTextEdit(text);
-    },[editMode, text, setTextEdit, setEditMode])
+    },[editMode, text, setTextEdit, setEditMode, complete])
 
     const onChangeInput = useCallback((e) => {
         setTextEdit(e.target.value);

@@ -1,24 +1,32 @@
 import React, { useCallback } from "react";
-import Link from "../../Components/Link";
+import { connect } from "react-redux";
+
 import './styles.css';
 
-const Footer = () => {
-    const active = {
-        SHOW_ALL: "active",
-        SHOW_ACTIVE:"none",
-        SHOW_COMPLETE: "none"
-    };
+const Footer = ({filter,filterTodo}) => {
+    const onClick = useCallback((e) => {
+        filter(e.target.id);
+    },[filter])
 
-    const onclickSwitchActive = useCallback((e) => {
-        // console.log(e.currentTarget);
-    },[])
-  return (
-    <div className="groupbtn">
-      <Link filter={"SHOW_ALL"} className={active["SHOW_ALL"] } onclickSwitchActive={onclickSwitchActive}>All</Link>
-      <Link filter={"SHOW_ACTIVE"} className={active["SHOW_ACTIVE"]} onclickSwitchActive={onclickSwitchActive}>Active</Link>
-      <Link filter={"SHOW_COMPLETE"} className={active["SHOW_COMPLETE"]} onclickSwitchActive={onclickSwitchActive}>Complete</Link>
-    </div>
-  );
+    return (
+        <div className="groupbtn">
+        <button id={"SHOW_ALL"} className={filterTodo === "SHOW_ALL" ? "active" : " none"}  onClick={onClick}>All</button>
+        <button id={"SHOW_ACTIVE"} className={filterTodo === "SHOW_ACTIVE"  ? "active" : " none"}  onClick={onClick}>Active</button>
+        <button id={"SHOW_COMPLETE"} className={filterTodo === "SHOW_COMPLETE"  ? "active" : " none"}  onClick={onClick}>Complete</button>
+        </div>
+    );
 };
 
-export default Footer;
+const mapStateToProps = (state) => ({
+    filterTodo: state.filterTodo
+});
+const mapDispatchToProps = (dispatch) => {
+    return {
+        filter: (filter) => dispatch({
+            type: "FILTER_TODO",
+            filter
+        })
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);
