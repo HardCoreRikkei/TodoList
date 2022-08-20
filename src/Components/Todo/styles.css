@@ -11,13 +11,22 @@ li {
 ul li {
     cursor: pointer;
     position: relative;
-    padding: 12px 8px 12px 40px;
+    padding: 9px 8px 9px 40px;
     list-style-type: none;
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
     align-items: center;
 }
+
+ul li input {
+    width: 93%;
+}
+
+ul li div {
+    width: 93%;
+}
+
 ul li:nth-child(odd) {
     background: #f9f9f9;
 }
@@ -63,17 +72,25 @@ ul li.checked::before {
     color: #ddd;
     text-align: center;
     font-weight: 600;
+
+}
+
+.btn{
+    border: 1px white solid;
+    padding: 2px;
 }
 
 .editBtn {
-    border: 1px white solid;
-    padding: 2px;
     background-color: #282c34;
     margin-bottom: 2px;
 }
+
 .remoteBtn {
-    border: 1px white solid;
-    padding: 2px;
     background-color: red;
     margin-top: 2px;
+}
+
+.updateBtn {
+    background-color: green;
+    margin-bottom: 2px;
 }

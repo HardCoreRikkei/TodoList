@@ -13,6 +13,7 @@ const AddTodo = ({ dispatch }) => {
     const onClick = useCallback( (e) => {
         if (input) {
             dispatch(addTodo(input));
+            setInput("");
         }
     },[dispatch, input]);
 

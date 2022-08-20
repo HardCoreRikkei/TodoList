@@ -1,5 +1,4 @@
 const Todo = (state = [], action) => {
-    console.log(action);
     switch (action.type) {
         case "ADD_TODO":
             return [
@@ -11,12 +10,15 @@ const Todo = (state = [], action) => {
             }
             ];
         case "TOGGLE_TODO":
-            return state.map(
-                todo =>
-                    todo.id === action.id ? { ...todo, complete: !todo.complete } : todo
-                );
+            return state.map((todo) => 
+                todo.id === action.id ? { ...todo, complete: !todo.complete } : todo
+            );
         case "DELETE_TODO":
             return state.filter(todo => todo.id !== action.id)   
+        case "EDIT_TODO":
+            return state.map((todo) => 
+                todo.id === action.id ? { ...todo, text: action.text } : todo  
+            );
         default:
             return state;
     }
