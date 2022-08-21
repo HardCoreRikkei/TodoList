@@ -5,7 +5,7 @@ ul {
 li {
     list-style-type: 'none';
     cursor: "pointer";
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 ul li {

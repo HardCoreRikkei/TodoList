@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { connect } from "react-redux";
-
+import { filter } from "../../Actions/TodoList";
 import './styles.css';
 
 const Footer = ({filter,filterTodo}) => {
@@ -10,9 +10,9 @@ const Footer = ({filter,filterTodo}) => {
 
     return (
         <div className="groupbtn">
-        <button id={"SHOW_ALL"} className={filterTodo === "SHOW_ALL" ? "active" : " none"}  onClick={onClick}>All</button>
-        <button id={"SHOW_ACTIVE"} className={filterTodo === "SHOW_ACTIVE"  ? "active" : " none"}  onClick={onClick}>Active</button>
-        <button id={"SHOW_COMPLETE"} className={filterTodo === "SHOW_COMPLETE"  ? "active" : " none"}  onClick={onClick}>Complete</button>
+            <button id={"SHOW_ALL"} className={filterTodo === "SHOW_ALL" ? "active" : " none"}  onClick={onClick}>All</button>
+            <button id={"SHOW_ACTIVE"} className={filterTodo === "SHOW_ACTIVE"  ? "active" : " none"}  onClick={onClick}>Active</button>
+            <button id={"SHOW_COMPLETE"} className={filterTodo === "SHOW_COMPLETE"  ? "active" : " none"}  onClick={onClick}>Complete</button>
         </div>
     );
 };
@@ -20,13 +20,8 @@ const Footer = ({filter,filterTodo}) => {
 const mapStateToProps = (state) => ({
     filterTodo: state.filterTodo
 });
-const mapDispatchToProps = (dispatch) => {
-    return {
-        filter: (filter) => dispatch({
-            type: "FILTER_TODO",
-            filter
-        })
-    }
+const mapDispatchToProps =  {
+    filter: filter
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Footer);

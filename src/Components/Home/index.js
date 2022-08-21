@@ -8,12 +8,12 @@ const Home = () => {
       <header className="Home-header">
         <img src={logo} className="Home-logo" alt="logo" />
         <a
-          className="Home-link"
-          href="/."
-          target="_blank"
-          rel="noopener noreferrer"
+            className="Home-link"
+            href="/."
+            target="_blank"
+            rel="noopener noreferrer"
         >
-          ReactJS 
+            Nguyen Thuy Phuong 
         </a>
       </header>
     </div>
