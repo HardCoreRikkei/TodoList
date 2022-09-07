@@ -12,8 +12,8 @@ button {
     border: 1px solid #4aa5d2;
 }
 .active {
-    background: #d9d9d9;
-    color: black;
+    background: #79aec8;
+    color: #ffffff;
     transition: 0.5s;
 }
 .groupbtn {
