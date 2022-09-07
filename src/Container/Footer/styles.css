@@ -1,15 +1,15 @@
 button {
     padding: 10px;
     width: 20%;
-    background: #282c34;
-    color: white;
+    background: #ffffff;
+    color: #4aa5d2;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 3px;
     font-weight: 600;
-    border: 0.1px solid black;
+    border: 1px solid #4aa5d2;
 }
 .active {
     background: #d9d9d9;

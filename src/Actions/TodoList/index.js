@@ -1,10 +1,10 @@
 let nextTodoId = 0;
 
-export const addTodo = text => ({
+export const addTodo = description => ({
   type: "ADD_TODO",
   id: nextTodoId++,
-  complete: false,
-  text
+  completed: false,
+  description
 });
 
 export const toggleTodo = id => ({
@@ -22,10 +22,10 @@ export const filter = filter => ({
   filter
 });
 
-export const editTodo = (id, text) => ({
+export const editTodo = (id, description) => ({
   type: "EDIT_TODO",
   id,
-  text
+  description
 });
 
 export const typeFilter = {

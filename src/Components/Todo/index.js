@@ -4,20 +4,20 @@ import { deleteTodo, editTodo } from "../../Actions/TodoList";
 
 import './styles.css';
 
-const Todo = ({ text, complete, id, onClick, deleteTodo, editTodo}) => {
+const Todo = ({ description, completed, id, onClick, deleteTodo, editTodo}) => {
     const [editMode, setEditMode] = useState(false);
-    const [textEdit, setTextEdit] = useState(text);
+    const [textEdit, setTextEdit] = useState(description);
 
     const onClickHandleDeleteBtn = useCallback((e) => {
         deleteTodo(id);
     },[deleteTodo,id])
 
     const onClickSwitchEditMode = useCallback((e) => {
-        if(!complete) {
+        if(!completed) {
             setEditMode(!editMode);
         }
-        setTextEdit(text);
-    },[editMode, text, setTextEdit, setEditMode, complete])
+        setTextEdit(description);
+    },[editMode, description, setTextEdit, setEditMode, completed])
 
     const onChangeInput = useCallback((e) => {
         setTextEdit(e.target.value);
@@ -30,7 +30,7 @@ const Todo = ({ text, complete, id, onClick, deleteTodo, editTodo}) => {
 
     return (
         editMode ?
-        <li  className={complete ? "checked" : ""}> 
+        <li  className={completed ? "checked" : ""}> 
             <input value={textEdit} onChange={onChangeInput}>
             </input>
             <div className="groupBtn">        
@@ -38,12 +38,12 @@ const Todo = ({ text, complete, id, onClick, deleteTodo, editTodo}) => {
                 <div className="remoteBtn btn " onClick={onClickSwitchEditMode}>Cancel</div>
             </div>
         </li> : 
-        <li  className={complete ? "checked" : ""}> 
+        <li  className={completed ? "checked" : ""}> 
             <div onClick = {onClick} >
-                {text}
+                {description}
             </div>
             <div className="groupBtn">        
-                <div className="editBtn btn" style={{display: complete ? "none" : ""}} onClick={onClickSwitchEditMode}>Edit</div>
+                <div className="editBtn btn" style={{display: completed ? "none" : ""}} onClick={onClickSwitchEditMode}>Edit</div>
                 <div className="remoteBtn btn" onClick={onClickHandleDeleteBtn}>Delete</div>
             </div>
         </li>
@@ -55,7 +55,7 @@ const mapStateToProps = state => ({
   
 const mapDispatchToProps = dispatch => ({
     deleteTodo: id => dispatch(deleteTodo(id)),
-    editTodo: (id, text) => dispatch(editTodo(id,text))
+    editTodo: (id, description) => dispatch(editTodo(id,description))
 });
   
   export default connect(mapStateToProps, mapDispatchToProps)(Todo);

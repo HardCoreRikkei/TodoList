@@ -5,19 +5,19 @@ const Todo = (state = [], action) => {
             ...state,
             {
                 id: action.id,
-                complete: action.complete,
-                text: action.text
+                completed: action.completed,
+                description: action.description
             }
             ];
         case "TOGGLE_TODO":
             return state.map((todo) => 
-                todo.id === action.id ? { ...todo, complete: !todo.complete } : todo
+                todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
             );
         case "DELETE_TODO":
             return state.filter(todo => todo.id !== action.id)   
         case "EDIT_TODO":
             return state.map((todo) => 
-                todo.id === action.id ? { ...todo, text: action.text } : todo  
+                todo.id === action.id ? { ...todo, description: action.description } : todo  
             );
         default:
             return state;
