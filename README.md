@@ -1,9 +1,8 @@
-# TodoList
 Phân bổ tiền tệ:
 	- Đầu tư: 50% -> BNB
-		Lãi: Cash out tiền mặt dần khi chu kỳ uptrend xuất hiện(Min x2)
+		+ Lãi: Cash out tiền mặt dần khi chu kỳ uptrend xuất hiện(Min x2)
 	- Đầu cơ: Trading 20%
-		Hạn mức: Nâng dần theo tài sản + lực tay, kinh nghiệm
+		+ Hạn mức: Nâng dần theo tài sản + lực tay, kinh nghiệm
 	- Stable coin: 30% (Ưu tiên BUST)
 Phân bổ lãi trading:
 	- Thống kê theo tuần:
@@ -15,16 +14,12 @@ Hệ thống giao dịch:
 		- 5.00 a.m - 8.00 a.m
 		- 1.00 p.m - 1.30 p.m
 		- 3.00 p.m - 5.00 p.m (Nếu có thể)
-	Note: 
-		7.00 pm - 10.00 pm or thời gian ra tin: Biến động mạnh => Đứng ngoài or giảm vol/2 or gồng lệnh dương
-		Biến động càng mạnh hồi càng mạnh. (Chú ý điểm vào hồi, luôn có sl)
+	Note: 7.00 pm - 10.00 pm or thời gian ra tin: Biến động mạnh => Đứng ngoài or giảm vol/2 or gồng lệnh dương. Biến động càng mạnh hồi càng mạnh. (Chú ý điểm vào hồi, luôn có sl)
 	
 	[Scalping, Sóng 1 - Sóng hồi]
 		Tín hiệu: 
 			- Fibo sóng hồi
-			- Quá mua, quá bán, phân kỳ(m5):
-				Phân kỳ là một yếu tố cần nhưng muốn đủ phải cần những dấu hiệu khác bổ trợ
-				
+			- Quá mua, quá bán, phân kỳ(m5): Phân kỳ là một yếu tố cần nhưng muốn đủ phải cần những dấu hiệu khác bổ trợ
 			- Mô hình: vdv,flag..
 			- Vol + nến
 			- EMA banker(34, 89)
