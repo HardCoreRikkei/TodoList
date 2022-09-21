@@ -13,7 +13,7 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            Nguyen Thuy Phuong 
+            Rekkei 
         </a>
       </header>
     </div>
