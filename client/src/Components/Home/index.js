@@ -13,7 +13,7 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            Rekkei 
+            Ho Duc Long  
         </a>
       </header>
     </div>
