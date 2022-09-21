@@ -13,7 +13,7 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            Rekkei 
+            Rekkei D8
         </a>
       </header>
     </div>
